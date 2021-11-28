@@ -5,6 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "relay": "relay-compiler --exclude '**/.next/**' '**/node_modules/**' '**/test/**'  '**/__generated__/**' --exclude '**/schema/**' --src ./src --schema ./schema.graphql --language typescript --artifactDirectory ./src/__generated__",
     "lint": "next lint"
   },
   "dependencies": {
