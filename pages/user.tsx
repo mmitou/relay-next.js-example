@@ -1,19 +1,10 @@
 import { NextPage } from "next";
-import UserInfo from "../src/UserInfo";
+import dynamic from "next/dynamic";
 
-interface Props {
-  flag: boolean;
-}
+const UserInfo = dynamic(() => import("../src/UserInfo"), { ssr: false });
 
-const User: NextPage<Props> = ({ flag }: Props) => {
-  if (flag) {
-    return <UserInfo />;
-  }
-  return <p>developing...</p>;
+const User: NextPage = () => {
+  return <UserInfo />;
 };
-
-export async function getStaticProps() {
-  return { props: { flag: false } };
-}
 
 export default User;
