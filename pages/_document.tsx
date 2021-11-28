@@ -2,18 +2,19 @@ import * as React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
 import createEmotionCache from "../src/createEmotionCache";
+import theme from "../src/theme";
 
 export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head>
+          <meta name="theme-color" content={theme.palette.primary.main} />
           {/* Roboto font */}
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
-          <meta name="viewport" content="initial-scale=1, width=device-width" />
         </Head>
         <body>
           <Main />
