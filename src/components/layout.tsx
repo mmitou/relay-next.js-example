@@ -23,11 +23,11 @@ const Layout: FC = ({ children }) => {
           >
             <MenuIcon />
           </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            VideoChat
+          </Typography>
+          <Button color="inherit">Login</Button>
         </Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          VideoChat
-        </Typography>
-        <Button color="inherit">Login</Button>
       </AppBar>
       <Container disableGutters={true} maxWidth="sm" component="main">
         {children}
