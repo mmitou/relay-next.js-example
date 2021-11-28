@@ -15,6 +15,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import PersonIcon from "@mui/icons-material/Person";
 import { FC, useState } from "react";
+import Router from "next/router";
 
 const Layout: FC = ({ children }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -49,7 +50,7 @@ const Layout: FC = ({ children }) => {
           onClick={() => setIsDrawerOpen(false)}
         >
           <List>
-            <ListItem button key="user">
+            <ListItem button key="user" onClick={() => Router.replace("/user")}>
               <ListItemIcon>
                 <PersonIcon />
               </ListItemIcon>
